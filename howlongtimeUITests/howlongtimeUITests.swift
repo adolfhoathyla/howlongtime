@@ -35,25 +35,52 @@ class howlongtimeUITests: XCTestCase {
     }
     
     func testHowLongTimeMain() {
-        let year = Date().getYear()
-        let day = Date().getDays()
-        let monthName = Date().getMonthName()
+        //pegando ano atual
+        let year = Calendar.current.component(.year, from: Date())
         
+        //pegando dia atual
+        let day = Calendar.current.component(.day, from: Date())
+        
+        //pegando mês atual
+        let formatter = DateFormatter()
+        formatter.dateFormat = "LLLL"
+        let monthName = formatter.string(from: Date())
+        
+        //entrando com dados
         let app = XCUIApplication()
         let datePickersQuery = app.datePickers
         datePickersQuery.pickerWheels["\(year)"].adjust(toPickerWheelValue: "1993")
         datePickersQuery.pickerWheels["\(day)"].adjust(toPickerWheelValue: "26")
         datePickersQuery.pickerWheels[monthName].adjust(toPickerWheelValue: "April")
         app.otherElements.containing(.navigationBar, identifier:"how long time?").children(matching: .other).element.children(matching: .other).element.children(matching: .other).element.children(matching: .textField).element(boundBy: 1).tap()
-        datePickersQuery.pickerWheels["1993"].swipeUp()
-        datePickersQuery.pickerWheels["26"].swipeUp()
-        datePickersQuery.pickerWheels["April"].swipeUp()
+        datePickersQuery.pickerWheels["1993"].adjust(toPickerWheelValue: "2002")
+        datePickersQuery.pickerWheels["26"].adjust(toPickerWheelValue: "19")
+        datePickersQuery.pickerWheels["April"].adjust(toPickerWheelValue: "February")
         app.buttons["Just Do It!"].tap()
+        
+        //testando anos
+        XCTAssert(app.staticTexts["8"].exists, "Resultado deveria ser 8")
+        
         app.buttons["months"].tap()
+        
+        //testando meses
+        XCTAssert(app.staticTexts["105"].exists, "Resultado deveria ser 105")
+        
         app.buttons["weeks"].tap()
+        
+        //testando semanas
+        XCTAssert(app.staticTexts["460"].exists, "Resultado deveria ser 460")
+        
         app.buttons["days"].tap()
+        
+        //testando dias
+        XCTAssert(app.staticTexts["3221"].exists, "Resultado deveria ser 3221")
+        
         app.buttons["home"].tap()
         
     }
+    //8 105 460 3221
+    
+
     
 }
