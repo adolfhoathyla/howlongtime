@@ -79,8 +79,5 @@ class howlongtimeUITests: XCTestCase {
         app.buttons["home"].tap()
         
     }
-    //8 105 460 3221
-    
-
     
 }
