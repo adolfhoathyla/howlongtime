@@ -7,6 +7,7 @@
 //
 
 import XCTest
+@testable import howlongtime
 
 class howlongtimeUITests: XCTestCase {
         
@@ -31,6 +32,28 @@ class howlongtimeUITests: XCTestCase {
     func testExample() {
         // Use recording to get started writing UI tests.
         // Use XCTAssert and related functions to verify your tests produce the correct results.
+    }
+    
+    func testHowLongTimeMain() {
+        let year = Date().getYear()
+        let day = Date().getDays()
+        let monthName = Date().getMonthName()
+        
+        let app = XCUIApplication()
+        let datePickersQuery = app.datePickers
+        datePickersQuery.pickerWheels["\(year)"].adjust(toPickerWheelValue: "1993")
+        datePickersQuery.pickerWheels["\(day)"].adjust(toPickerWheelValue: "26")
+        datePickersQuery.pickerWheels[monthName].adjust(toPickerWheelValue: "April")
+        app.otherElements.containing(.navigationBar, identifier:"how long time?").children(matching: .other).element.children(matching: .other).element.children(matching: .other).element.children(matching: .textField).element(boundBy: 1).tap()
+        datePickersQuery.pickerWheels["1993"].swipeUp()
+        datePickersQuery.pickerWheels["26"].swipeUp()
+        datePickersQuery.pickerWheels["April"].swipeUp()
+        app.buttons["Just Do It!"].tap()
+        app.buttons["months"].tap()
+        app.buttons["weeks"].tap()
+        app.buttons["days"].tap()
+        app.buttons["home"].tap()
+        
     }
     
 }
