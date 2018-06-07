@@ -40,7 +40,7 @@
         <!--how long time?-->
         <scene sceneID="UTH-5e-WX8">
             <objects>
-                <viewController id="m9M-87-gwk" customClass="MainViewController" customModule="How_Long_Timhowlongtime_" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="m9M-87-gwk" customClass="MainViewController" customModule="howlongtime" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Jz2-mR-XhA">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -98,7 +98,7 @@
                                     <constraint firstAttribute="height" constant="30" id="m3A-bM-vnq"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" title="Just Do It!">
+                                <state key="normal" title="Done!">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <userDefinedRuntimeAttributes>
@@ -151,7 +151,7 @@
         <!--Years View Controller-->
         <scene sceneID="kOZ-la-YiL">
             <objects>
-                <viewController id="rA2-jU-Uhm" customClass="YearsViewController" customModule="How_Long_Timhowlongtime_" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="rA2-jU-Uhm" customClass="YearsViewController" customModule="howlongtime" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="lUj-OH-yBx">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -220,7 +220,7 @@
         <!--Months View Controller-->
         <scene sceneID="abz-gT-C3c">
             <objects>
-                <viewController id="ugv-nN-7kw" customClass="MonthsViewController" customModule="How_Long_Timhowlongtime_" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="ugv-nN-7kw" customClass="MonthsViewController" customModule="howlongtime" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ak2-Td-gEM">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -289,7 +289,7 @@
         <!--Weeks View Controller-->
         <scene sceneID="U6q-1V-vyI">
             <objects>
-                <viewController id="vsf-y4-Dya" customClass="WeeksViewController" customModule="How_Long_Timhowlongtime_" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="vsf-y4-Dya" customClass="WeeksViewController" customModule="howlongtime" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="hjY-dN-RpT">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -358,7 +358,7 @@
         <!--Days View Controller-->
         <scene sceneID="Oew-DG-hVd">
             <objects>
-                <viewController id="rtV-EK-AqQ" customClass="DaysViewController" customModule="How_Long_Timhowlongtime_" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="rtV-EK-AqQ" customClass="DaysViewController" customModule="howlongtime" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="V1v-BJ-CCu">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
