@@ -56,7 +56,7 @@ class howlongtimeUITests: XCTestCase {
         datePickersQuery.pickerWheels["1993"].adjust(toPickerWheelValue: "2002")
         datePickersQuery.pickerWheels["26"].adjust(toPickerWheelValue: "19")
         datePickersQuery.pickerWheels["April"].adjust(toPickerWheelValue: "February")
-        app.buttons["Just Do It!"].tap()
+        app.buttons["Done"].tap()
         
         //testando anos
         XCTAssert(app.staticTexts["8"].exists, "Resultado deveria ser 8")
