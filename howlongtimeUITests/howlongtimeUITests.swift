@@ -59,7 +59,7 @@ class howlongtimeUITests: XCTestCase {
         app.buttons["Done"].tap()
         
         //testando anos
-        XCTAssert(app.staticTexts["9"].exists, "Resultado deveria ser 8")
+        XCTAssert(app.staticTexts["8"].exists, "Resultado deveria ser 8")
         
         app.buttons["months"].tap()
         
