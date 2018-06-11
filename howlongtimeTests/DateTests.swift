@@ -37,7 +37,7 @@ class DateTests: XCTestCase {
     func testYears() {
         let start = Date.dateFromBrazilianFormat(brazilianFormat: "26/04/1993")
         let end = Date.dateFromBrazilianFormat(brazilianFormat: "31/05/2018")
-        XCTAssertEqual(end.years(from: start), 25)
+        XCTAssertEqual(end.years(from: start), 26)
     }
     
     func testMonths() {
